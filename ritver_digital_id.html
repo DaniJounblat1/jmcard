@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital ID - RITVER Paints & Coatings</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0d2b5e',
+                            light: '#1d4ed8',
+                        }
+                    },
+                    backgroundImage: {
+                        'paint-gradient': 'linear-gradient(to right, #ef4444, #f59e0b, #10b981, #3b82f6, #8b5cf6)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f1f5f9;
+            /* Subtle dot pattern background for a clean, modern look */
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* Smooth reveal animation for the card */
+        .card-enter {
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-8 bg-slate-100 font-sans">
+
+    <!-- Digital ID Card Container -->
+    <main class="card-enter w-full max-w-sm bg-white rounded-xl shadow-2xl overflow-hidden relative border border-gray-200">
+        
+        <!-- Header / Logo Area -->
+        <div class="bg-[#1a1a1a] pt-12 pb-10 px-6 text-center flex flex-col items-center justify-center relative">
+            <h1 class="text-[2.5rem] font-serif text-gray-100 tracking-[0.1em] drop-shadow-lg mb-1" style="font-family: 'Times New Roman', Times, serif;">RITVER</h1>
+            <div class="bg-[#c8102e] text-white text-[0.6rem] font-bold tracking-[0.2em] uppercase px-4 py-1 mb-3">
+                Paints & Coatings
+            </div>
+            <!-- Green, White, Red Accent Line -->
+            <div class="flex h-1.5 w-32 mx-auto shadow-sm">
+                <div class="flex-1 bg-[#008c45]"></div>
+                <div class="flex-1 bg-[#ffffff]"></div>
+                <div class="flex-1 bg-[#cd212a]"></div>
+            </div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="pt-8 pb-4 px-6 text-center">
+            <h2 class="text-2xl font-extrabold text-gray-900">Jamil Matraji</h2>
+            <p class="text-sm font-semibold text-gray-600 mt-1">Sales Director of Ritver SAL</p>
+        </div>
+
+        <!-- Actions & Contact Info -->
+        <div class="px-6 py-2 space-y-3">
+            
+            <!-- Address -->
+            <div class="flex items-center p-3 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="w-10 h-10 rounded-full bg-white shadow-sm text-gray-700 flex items-center justify-center mr-4 shrink-0">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                    <p class="text-[0.65rem] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Address</p>
+                    <p class="text-xs text-gray-800 font-medium">Industrial Zone, Street 19,<br>Reaidy Bldg, Hosrayel, Lebanon</p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <a href="tel:+96181781780" class="flex items-center p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-gray-200 transition">
+                <div class="w-10 h-10 rounded-full bg-white shadow-sm text-gray-700 flex items-center justify-center mr-4 shrink-0">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                    <p class="text-[0.65rem] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Phone</p>
+                    <p class="text-sm text-gray-800 font-medium">+961 81 781 780</p>
+                </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:jamil.matraji@ritver.com" class="flex items-center p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-gray-200 transition">
+                <div class="w-10 h-10 rounded-full bg-white shadow-sm text-gray-700 flex items-center justify-center mr-4 shrink-0">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="text-[0.65rem] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Email</p>
+                    <p class="text-sm text-gray-800 font-medium truncate">jamil.matraji@ritver.com</p>
+                </div>
+            </a>
+
+            <!-- Website -->
+            <a href="https://www.ritver.com" target="_blank" class="flex items-center p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-gray-200 transition">
+                <div class="w-10 h-10 rounded-full bg-white shadow-sm text-gray-700 flex items-center justify-center mr-4 shrink-0">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div>
+                    <p class="text-[0.65rem] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Website</p>
+                    <p class="text-sm text-gray-800 font-medium">www.ritver.com</p>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/ritverpaintsofficial" target="_blank" class="flex items-center p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-gray-200 transition">
+                <div class="w-10 h-10 rounded-full bg-white shadow-sm text-gray-700 flex items-center justify-center mr-4 shrink-0">
+                    <i class="fab fa-instagram text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-[0.65rem] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Instagram</p>
+                    <p class="text-sm text-gray-800 font-medium">@ritverpaintsofficial</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Footer Area -->
+        <div class="mt-6 pb-8 pt-6 flex flex-col items-center justify-center text-center bg-gray-50 border-t border-gray-100">
+            <p class="text-[0.65rem] font-bold text-gray-900 uppercase tracking-widest">Part of RAR Holding</p>
+            <div class="flex items-center space-x-1 mt-1 text-2xl font-black tracking-tighter" style="font-family: Arial, sans-serif;">
+                <span>Я</span><span class="text-[#c8102e]">A</span><span>R</span>
+            </div>
+            <p class="text-[0.5rem] font-bold tracking-[0.25em] text-gray-500 mt-0.5 uppercase">Holding</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
